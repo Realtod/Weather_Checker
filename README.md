@@ -1,9 +1,5 @@
 # Weather_Checker
 
-Вот полный пример файла README.md для твоего проекта.
-
-README.md
-
 # Flask Weather Checker
 
 ## Описание проекта
