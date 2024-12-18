@@ -89,7 +89,7 @@ def check_weather():
         if request.form.get('ending') == None:
             return "Поле 'ending' должно быть заполнено"
 
-        return f"Bad weather in 1-st city: {weather_beginning}", f"Bad weather in 2-nd city: {weather_ending}"
+        return f"Bad weather in 1-st city: {weather_beginning}, \n Bad weather in 2-nd city: {weather_ending}"
 
 if __name__ == '__main__':
     app.run(debug=True)
