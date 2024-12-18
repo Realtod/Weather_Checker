@@ -19,7 +19,7 @@
 
 1. **Склонируйте репозиторий**:
    ```
-   git clone https://github.com/your_username/weather_checker.git
+   git clone https://github.com/realtod/weather_checker.git
    cd weather_checker
    ```
 
