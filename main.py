@@ -15,12 +15,10 @@ def get_weather(latitude, longitude):
         "q": f"{latitude},{longitude}"
     }
     response = requests.get(location_url, params=params)
-    # response = requests.get('http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=2DaApDiYAFptNo67JRMtEVemhiGGLlTK&q=55.7558,37.6173')
     response.raise_for_status()
     location_data = response.json()
     location_key = location_data["Key"]
 
-    # Получить погоду по LocationKey
     weather_url = f"{BASE_URL}forecasts/v1/hourly/1hour/{location_key}"
     params = {"apikey": API_KEY, "details": True}
     response = requests.get(weather_url, params=params)
@@ -28,16 +26,6 @@ def get_weather(latitude, longitude):
     weather_data = response.json()[0]
 
     return weather_data
-
-# weather_data = get_weather(55.7558, 37.6173)
-# print(weather_data)
-#
-# temperature = weather_data["Temperature"]["Value"]
-# humidity = weather_data["RelativeHumidity"]
-# wind_speed = weather_data["Wind"]["Speed"]["Value"] * 1.609
-# rain = weather_data["RainProbability"]
-#
-# print(temperature, humidity, wind_speed, rain)
 
 
 def check_bad_weather(temperature, humidity, wind_speed, rain):
