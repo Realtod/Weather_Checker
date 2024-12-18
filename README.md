@@ -92,27 +92,27 @@ API_KEY = 'ваш_API_ключ'
 	•	Влажность превышает 70%.
 	•	Вероятность дождя превышает 70%.
 
-##Пример использования API
+## Пример использования API
 
-	1.	Получение LocationKey по координатам:
+1.	Получение LocationKey по координатам:
 
 ```GET /locations/v1/cities/geoposition/search?apikey=API_KEY&q=55.7558,37.6173```
 
 
-	2.	Получение прогноза погоды на 1 час:
+2.	Получение прогноза погоды на 1 час:
 
 ```GET /forecasts/v1/hourly/1hour/LOCATION_KEY?apikey=API_KEY&details=true```
 
-##Структура проекта
-
+## Структура проекта
+```
 weather_checker/
 │
 ├── templates/
 │   └── get_route_points.html      # HTML-шаблон формы ввода
 ├── main.py                        # Основной файл приложения Flask
 └── README.md                      # Документация проекта
-
-##Дополнительно
+```
+## Дополнительно
 
 •	Для работы проекта необходимо активное интернет-соединение.
 •	Проверьте лимиты использования API на AccuWeather Developer Portal.
